@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GuessFoodGame</name>
+    </assembly>
+    <members>
+        <member name="M:YourApp.Controllers.Api.FoodGuessingGameController.StartGame">
+            <summary>
+            Starts a new game session.
+            </summary>
+            <remarks>
+            Call this method to start a new game session. It returns a session ID which you will need to use for subsequent requests to the answer endpoint.
+            </remarks>
+            <returns>A session ID for starting a new game session along with a message prompting the user to think of a dish they like.</returns>
+        </member>
+        <member name="M:YourApp.Controllers.Api.FoodGuessingGameController.AnswerQuestion(GuessFoodGame.Models.UserResponse)">
+            <summary>
+            Processes the user's answer and progresses the game.
+            </summary>
+            <remarks>
+            This endpoint processes the user's answer to the current question or guess.
+            Based on the answer, it will either proceed to the next question, make a guess,
+            or enter into the learning phase if the guess was incorrect.
+            </remarks>
+            <param name="resposta">The user's answer, including the session ID from the startGame endpoint.</param>
+            <returns>A message indicating the next question, a guess, or a prompt for learning a new food.</returns>
+        </member>
+    </members>
+</doc>
