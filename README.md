@@ -1,65 +1,31 @@
-Food Guessing Game API
-Purpose
-This Food Guessing Game API is a web-based application designed to play a guessing game with users. The game involves thinking of a food item and then answering a series of yes/no questions until the application guesses the food. If the guess is incorrect, the game learns from the user, enhancing its ability to guess correctly in future games.
+<h1>API de Jogo de Adivinhação de Comidas</h1>
 
-Requirements
-To run this application, you will need:
+Propósito: Esta API de Jogo de Adivinhação de Comidas é uma aplicação baseada na web projetada para jogar um jogo de adivinhação com os usuários. O jogo envolve pensar em um item alimentar e, em seguida, responder a uma série de perguntas de sim/não até que a aplicação adivinhe a comida. Se o palpite estiver incorreto, o jogo aprende com o usuário, aprimorando sua capacidade de adivinhar corretamente em jogos futuros.
 
-.NET 6.0 SDK and Runtime
-An IDE like Visual Studio, VS Code, or a similar .NET-compatible IDE
-Running the Application
-Clone the repository to your local machine.
-Open the solution in your IDE.
-Build the solution to restore NuGet packages.
-Run the application. This can typically be done within your IDE or via the command line with dotnet run.
-Usage
-The application exposes two main endpoints:
+<h3>Para executar esta aplicação, você precisará de:</h3>
 
-Start Game: Initializes a new game session.
+SDK e Runtime do .NET 6.0
+Uma IDE como Visual Studio, VS Code, ou uma IDE compatível com .NET semelhante
+
+<h3>Executando a Aplicação:</h3>
+
+Clone o repositório para sua máquina local.
+Abra a solução na sua IDE.
+Construa a solução para restaurar os pacotes NuGet.
+Execute a aplicação. Isso geralmente pode ser feito dentro da sua IDE ou via linha de comando com dotnet run.
+Uso: A aplicação expõe dois principais endpoints:
+
+Iniciar Jogo: Inicializa uma nova sessão de jogo.
 
 Endpoint: GET /api/FoodGuessingGame/startGame
-Response: A session ID and a message prompting the user to think of a food item.
-Answer Question: Processes the user's answer and navigates through the game.
+Resposta: Um ID de sessão e uma mensagem pedindo ao usuário para pensar em um item alimentar.
+Responder Pergunta: Processa a resposta do usuário e navega pelo jogo.
 
 Endpoint: POST /api/FoodGuessingGame/answer
-Request Body: JSON object containing the session ID and user's answer.
-Response: Depending on the state of the game, a question, guess, or learning prompt.
-Swagger Documentation
+Corpo da Requisição: Objeto JSON contendo o ID da sessão e a resposta do usuário.
+Resposta: Dependendo do estado do jogo, uma pergunta, palpite ou prompt de aprendizado.
+Documentação Swagger
 
-The API also includes Swagger documentation for easy interaction and testing. Access the Swagger UI at:
+A API também inclui documentação Swagger para fácil interação e teste.
 
-URL: /api-docs
-Swagger provides a visual interface for testing the API endpoints, viewing request/response formats, and understanding the API's capabilities.
-
-Example Requests
-Here's how you can interact with the API:
-
-Start a New Game Session:
-
-
-GET /api/FoodGuessingGame/startGame
-Response:
-
-
-{
-    "sessionId": "some-session-id",
-    "message": "Por favor, pense em um prato que gosta."
-}
-Answer a Question:
-
-Once you have your sessionId, you can start answering questions:
-
-
-POST /api/FoodGuessingGame/answer
-Content-Type: application/json
-{
-    "sessionId": "some-session-id",
-    "answer": "sim" // or "nao"
-}
-Response:
-
-
-{
-    "message": "Next question or a guess from the game"
-}
-Continue interacting with the API using the session ID until the game makes a guess. If the guess is incorrect, you will be prompted to teach the game about your food.
+O Swagger oferece uma interface visual para testar os endpoints da API, visualizar formatos de solicitação/resposta e entender as capacidades da API.
