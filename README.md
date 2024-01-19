@@ -11,8 +11,8 @@ Uma IDE como Visual Studio, VS Code, ou uma IDE compatível com .NET semelhante
 
 Clone o repositório para sua máquina local.
 Abra a solução na sua IDE.
-Construa a solução para restaurar os pacotes NuGet.
-Execute a aplicação. Isso geralmente pode ser feito dentro da sua IDE ou via linha de comando com dotnet run.
+Build a solução para restaurar os pacotes NuGet.
+Execute a aplicação. Isso geralmente pode ser feito dentro da sua IDE ou via linha de comando com dotnet run. </br>
 Uso: A aplicação expõe dois principais endpoints:
 
 Iniciar Jogo: Inicializa uma nova sessão de jogo.
